@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Виктория Удалова](https://up.htmlacademy.ru/htmlcss-individual/1/user/2183951).
-* Наставник: `Неизвестно`.
+* Наставник: `Михаил Данюшин`(https://htmlacademy.ru/profile/id225742).
 
 ---
 
