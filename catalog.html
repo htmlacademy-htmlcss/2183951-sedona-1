@@ -71,7 +71,7 @@
                       </li>
                       <li class="control-item">
                         <label class="control-name">
-                            <input class="control-input" type="checkbox" name="parking lot" checked>
+                            <input class="control-input" type="checkbox" name="parking-lot" checked>
                             Парковка
                         </label>
                       </li>
@@ -88,19 +88,19 @@
                     <ul class="control-list">
                         <li class="control-item">
                           <label class="control-name">
-                              <input class="control-input" type="radio" name="hotel" checked>
+                              <input class="control-input" type="radio" name="hotel" value="1" checked>
                               Гостиница
                           </label>
                         </li>
                         <li class="control-item">
                           <label class="control-name">
-                              <input class="control-input" type="radio" name="hotel">
+                              <input class="control-input" type="radio" name="hotel" value="2">
                               Мотель
                           </label>
                         </li>
                         <li class="control-item">
                           <label class="control-name">
-                              <input class="control-input" type="radio" name="hotel">
+                              <input class="control-input" type="radio" name="hotel" value="3">
                               Апартаменты
                           </label>
                         </li>
@@ -119,15 +119,15 @@
                     <option value="cheap">Сначала дешёвое</option>
                     <option value="expensive">Сначала дорогое</option>
                   </select>
-                  <a class="button-hotels-display" href="#" >
+                  <button class="button-hotels-display" type="button" name="show-list">
                     <span class="visually-hidden">Показать список</span>
-                  </a>
-                  <a class="button-hotels-display" href="#">
+                  </button>
+                  <button class="button-hotels-display" type="button" name="show-table">
                     <span class="visually-hidden">Показать карточки</span>
-                  </a>
-                  <a class="button-hotels-display" href="#">
+                  </button>
+                  <button class="button-hotels-display" type="button" name="show-slides">
                     <span class="visually-hidden">Показать слайд-шоу</span>
-                  </a>
+                  </button>
             </div>
             <ul class="hotels-list">
                 <li class="hotel-card">
@@ -201,7 +201,7 @@
             <p class="subscription-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <input type="email" id="sub-email" placeholder="Ваш e-mail" name="sub-email">
-              <button class="sub-button button" type="submit">Подписаться</button>
+              <button class="sub-button blue-button" type="submit">Подписаться</button>
             </form>
           </section>
     </main>
