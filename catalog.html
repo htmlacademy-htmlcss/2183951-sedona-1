@@ -3,50 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <ul class="navigation-list">
+        <ul class="navigation-list nobullet">
           <li class="navigation-item">
             <a class="navigation-logo" href="index.html">
               <img src="images/logo-page.svg" width="138" height="64" alt="Логотип">
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-list navigation-user nobullet">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link navigation-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="notification-badge">12</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link brown-button" href="#">Хочу сюда</a>
+            <a class="navigation-link brown-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-inner">
-        <header class="inner-header">
+   <div class="inner-features">
+    <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs">
+            <ul class="breadcrumbs nobullet">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
                    <span class="visually-hidden">Главная</span>
@@ -62,7 +63,7 @@
             <form class="filter-list" action="https://echo.htmlacademy.ru/" method="post">
                 <fieldset class="filter-group">
                     <legend class="filter-group-title">Инфраструктура:</legend>
-                    <ul class="control-list">
+                    <ul class="control-list nobullet">
                       <li class="control-item">
                         <label class="control-name">
                             <input class="control-input" type="checkbox" name="pool" checked>
@@ -85,7 +86,7 @@
                 </fieldset>
                 <fieldset class="filter-group">
                     <legend class="filter-group-title">Тип жилья:</legend>
-                    <ul class="control-list">
+                    <ul class="control-list nobullet">
                         <li class="control-item">
                           <label class="control-name">
                               <input class="control-input" type="radio" name="hotel" value="hotel" checked>
@@ -112,6 +113,7 @@
                 </div>
             </form>
         </section>
+</div>
         <section class="hotels">
             <h2 class="hotels-number">Найдено гостиниц: 38</h2>
             <div class="hotels-display">
@@ -129,7 +131,7 @@
                     <span class="visually-hidden">Показать слайд-шоу</span>
                   </button>
             </div>
-            <ul class="hotels-list">
+            <ul class="hotels-list nobullet">
                 <li class="hotel-card">
                     <a class="hotel-card-link" href="#">
                         <img src="images/catalog/amara.jpg" width="300" height="212" alt="Красивое звездное небо в горах">
@@ -175,7 +177,7 @@
                     <span class="hotel-rating">Рейтинг: 5,0</span>
                 </li>
             </ul>
-            <ul class="pagination">
+            <ul class="pagination nobullet">
                 <li class="pagination-item">
                   <a class="pagination-link pagination-current">1</a>
                 </li>
@@ -196,9 +198,9 @@
                   </li>
               </ul>
         </section>
-        <section class="subscription">
-            <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-            <p class="subscription-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <section class="subscription-catalog">
+            <h2 class="subscription-title-catalog">Подпишитесь на рассылку</h2>
+            <p class="subscription-subtitle-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <input type="email" id="sub-email" placeholder="Ваш e-mail" name="sub-email">
               <button class="sub-button blue-button" type="submit">Подписаться</button>
@@ -209,7 +211,7 @@
     <footer class="page-footer">
       <section class="footer-socials">
        <h2 class="visually-hidden">Наши соцсети</h2>
-       <ul>
+       <ul class="nobullet">
         <li class="footer-social-item">
           <a class="button-social" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
