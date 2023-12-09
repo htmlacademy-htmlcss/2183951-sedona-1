@@ -56,6 +56,7 @@ body {
   color: #000000;
 }
 
+/*Навигация*/
 .navigation {
   width: 1200px;
   display: flex;
@@ -121,6 +122,8 @@ body {
   background-position: center;
 }
 
+
+/*Главная страница*/
 .page-container {
   width: 1200px;
   margin: 0 auto;
@@ -137,6 +140,7 @@ body {
   margin: 0 auto;
 }
 
+/*Преимущества + рекомендации*/
 .advantages {
   text-align: center;
 }
@@ -213,6 +217,7 @@ body {
   color: #ffffff;
 }
 
+/*Поиск на главной странице*/
 .search {
   text-align: center;
 }
@@ -239,6 +244,7 @@ body {
   background-color: #756157;
 }
 
+/*Подписка*/
 .subscription {
   text-align: center;
   background-image: url("/images/subscribe-background.jpg");
@@ -271,6 +277,7 @@ body {
   text-transform: uppercase;
 }
 
+/*Подвал*/
 .page-footer {
   display: flex;
   margin: 0 auto;
@@ -342,7 +349,13 @@ body {
   background-position: center;
 }
 
-/*Каталог*/
+
+
+/*                                ٩(◕‿◕｡)۶                              */
+/*                                Каталог                               */
+
+
+/* Фильтры */
 .inner-features {
   background-image: url("/images/filter-background.jpg");
   background-repeat: no-repeat;
@@ -394,6 +407,8 @@ body {
   width: 190px;
 }
 
+
+/* Каталог */
 .hotels-main {
   width: 1060px;
   margin: 0 auto;
@@ -556,6 +571,8 @@ body {
   text-transform: uppercase;
 }
 
+
+/* Пагинация */
 .pagination {
   display: flex;
   padding-left: 0;
@@ -577,6 +594,8 @@ body {
   font-weight: 700;
 }
 
+
+/* Подписка */
 .subscription-catalog {
   text-align: center;
 }
