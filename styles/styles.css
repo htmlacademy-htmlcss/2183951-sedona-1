@@ -39,7 +39,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .page-header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -96,7 +96,7 @@ body {
 
 .notification-badge {
   text-align: center;
-  background-color: #7DB54F;
+  background-color: #7db54f;
   color: #ffffff;
   font-size: 16px;
   line-height: 10px;
@@ -107,7 +107,7 @@ body {
   width: 48px;
   height: 40px;
   display: block;
-  background-image: url("/images/search.svg");
+  background-image: url("../images/search.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -117,7 +117,7 @@ body {
   width: 48px;
   height: 40px;
   display: block;
-  background-image: url("/images/heart.svg");
+  background-image: url("../images/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -160,8 +160,8 @@ body {
 }
 
 .recommendations-item {
-  min-width: 400px;
-  height: 385px;
+  width: 400px;
+  min-height: 385px;
 }
 
 .advantages-title,
@@ -201,7 +201,7 @@ body {
 
 .deep-blue {
   min-width: 1200px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   color: #ffffff;
 }
 
@@ -269,7 +269,7 @@ body {
 .blue-button {
   font-family: inherit;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   font-size: 20px;
   font-weight: 700;
@@ -290,18 +290,6 @@ body {
   padding-left: 55px;
 }
 
-.footer-socials {
-  width: 225px;
-}
-
-.footer-tel {
-  width: 750px;
-}
-
-.footer-logo {
-  width: 225px;
-}
-
 .logo-academy {
   display: block;
   margin-left: 40px;
@@ -320,36 +308,25 @@ body {
 }
 
 .social-vk::after {
-  content: "";
-  width: 48px;
-  height: 40px;
-  display: block;
-  background-image: url("/images/vk.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../images/vk.svg");
 }
 
 .social-telegram::after {
-  content: "";
-  width: 48px;
-  height: 40px;
-  display: block;
-  background-image: url("/images/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../images/telegram.svg");
 }
 
 .social-youtube::after {
-  content: "";
-  width: 48px;
-  height: 40px;
-  display: block;
-  background-image: url("/images/youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../images/youtube.svg");
 }
 
-
+.social-vk::after, .social-telegram::after, .social-youtube::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /*                                ٩(◕‿◕｡)۶                              */
 /*                                Каталог                               */
@@ -357,7 +334,7 @@ body {
 
 /* Фильтры */
 .inner-features {
-  background-image: url("/images/filter-background.jpg");
+  background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #ffffff;
@@ -404,7 +381,7 @@ body {
 }
 
 .filter-buttons {
-  width: 190px;
+  min-width: 190px;
 }
 
 
@@ -436,31 +413,23 @@ body {
 }
 
 .button-display-list::after {
-  content: "";
-  width: 48px;
-  height: 40px;
-  display: block;
-  background-image: url("/images/catalog-display/list-display.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../images/catalog-display/list-display.svg");
 }
 
 .button-display-cards::after {
-  content: "";
-  width: 48px;
-  height: 40px;
-  display: block;
-  background-image: url("/images/catalog-display/table-display.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../images/catalog-display/table-display.svg");
 }
 
 .button-display-slide::after {
+  background-image: url("../images/catalog-display/slide-display.svg");
+}
+
+.button-display-slide::after, .button-display-cards::after,
+.button-display-list::after {
   content: "";
   width: 48px;
   height: 40px;
   display: block;
-  background-image: url("/images/catalog-display/slide-display.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -518,14 +487,14 @@ body {
 .select-buttons {
   width: 160px;
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
   padding: 0;
   margin: 0;
 }
 
 .hotel-card {
   width: 340px;
-  border: solid #E6E6E6 1px;
+  border: #e6e6e6 solid 1px;
   border-radius: 4px;
 }
 
@@ -553,7 +522,7 @@ body {
 }
 
 .hotel-rating {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: #333333;
   font-size: 16px;
   line-height: 20px;
@@ -562,7 +531,7 @@ body {
 
 .green-button {
   font-family: inherit;
-  background-color: #7DB54F;
+  background-color: #7db54f;
   color: #ffffff;
   border: none;
   font-size: 16px;
@@ -585,7 +554,7 @@ body {
 }
 
 .pagination-current {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: inherit;
 }
 
