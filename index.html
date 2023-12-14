@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <ul class="navigation-list nobullet">
+        <ul class="navigation-list navigation-info nobullet">
           <li class="navigation-item">
             <a class="navigation-logo" href="index.html">
               <img src="images/logo-page.svg" width="138" height="64" alt="Логотип">
@@ -25,13 +25,13 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user nobullet">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item navigation-link-search">
+            <a class="navigation-link " href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-favorite" href="#">
+          <li class="navigation-item navigation-link-favorite">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="notification-badge">12</span>
             </a>
@@ -43,7 +43,8 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="main-index main-container">
+      <div class="page-container">
       <section class="hero">
         <h1 class="visually-hidden">Седона</h1>
         <img class="hero-text" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
@@ -114,12 +115,13 @@
           <button class="blue-button" type="submit">Подписаться</button>
         </form>
       </section>
+    </div>
     </main>
 
     <footer class="page-footer">
       <section class="footer-socials">
        <h2 class="visually-hidden">Наши соцсети</h2>
-       <ul class="nobullet">
+       <ul class="socials-list nobullet">
         <li class="footer-social-item">
           <a class="button-social social-vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
@@ -149,6 +151,6 @@
           <img src="images/logo-academy.svg" width="115" height="33" alt="Логотип HTML Academy">
         </a>
       </section>
-    </footer>
+      </footer>
   </body>
 </html>

@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <ul class="navigation-list nobullet">
+        <ul class="navigation-list navigation-info nobullet">
           <li class="navigation-item">
             <a class="navigation-logo" href="index.html">
               <img src="images/logo-page.svg" width="138" height="64" alt="Логотип">
@@ -25,13 +25,13 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user nobullet">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item navigation-link-search">
+            <a class="navigation-link " href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-favorite" href="#">
+          <li class="navigation-item navigation-link-favorite">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="notification-badge">12</span>
             </a>
@@ -43,7 +43,7 @@
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner page-container">
    <div class="inner-features">
     <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -61,7 +61,7 @@
         <section class="filter">
             <h2 class="visually-hidden">Поиск гостиницы с фильтрами</h2>
             <form class="filter-list" action="https://echo.htmlacademy.ru/" method="post">
-                <fieldset class="filter-group">
+                <fieldset class="filter-group filter-facilities">
                     <legend class="filter-group-title">Инфраструктура:</legend>
                     <ul class="control-list nobullet">
                       <li class="control-item">
@@ -84,7 +84,7 @@
                       </li>
                     </ul>
                 </fieldset>
-                <fieldset class="filter-group">
+                <fieldset class="filter-group filter-accommodation">
                     <legend class="filter-group-title">Тип жилья:</legend>
                     <ul class="control-list nobullet">
                         <li class="control-item">
@@ -113,26 +113,32 @@
                 </div>
             </form>
         </section>
-</div>
+    </div>
         <section class="hotels">
+          <div class="hotels-main">
+            <div class="hotels-header">
             <h2 class="hotels-number">Найдено гостиниц: 38</h2>
             <div class="hotels-display">
                 <select class="select-control" aria-label="Сортировка">
                     <option value="cheap">Сначала дешёвое</option>
                     <option value="expensive">Сначала дорогое</option>
                   </select>
-                  <button class="button-hotels-display" type="button" name="show-list">
+                  <div class="select-buttons">
+                  <button class="button-hotels-display button-display-list" type="button" name="show-list">
                     <span class="visually-hidden">Показать список</span>
                   </button>
-                  <button class="button-hotels-display" type="button" name="show-table">
+                  <button class="button-hotels-display button-display-cards" type="button" name="show-table">
                     <span class="visually-hidden">Показать карточки</span>
                   </button>
-                  <button class="button-hotels-display" type="button" name="show-slides">
+                  <button class="button-hotels-display button-display-slide" type="button" name="show-slides">
                     <span class="visually-hidden">Показать слайд-шоу</span>
                   </button>
+                </div>
             </div>
+          </div>
             <ul class="hotels-list nobullet">
                 <li class="hotel-card">
+                  <div class="hotel-card-container">
                     <a class="hotel-card-link" href="#">
                         <img src="images/catalog/amara.jpg" width="300" height="212" alt="Красивое звездное небо в горах">
                         <h3 class="hotel-name">Amara Resort & Spa</h3>
@@ -142,8 +148,10 @@
                     <a class="brown-button" href="#">Подробнее</a>
                     <button class="blue-button" type="button" name="select-button">В избранное</button>
                     <span class="hotel-rating">Рейтинг: 8,5</span>
+                  </div>
                 </li>
                 <li class="hotel-card">
+                  <div class="hotel-card-container">
                     <a class="hotel-card-link" href="#">
                         <img src="images/catalog/poco-diablo.jpg" width="300" height="212" alt="Скалы на фоне радуги">
                         <h3 class="hotel-name">Villas at Poco Diablo</h3>
@@ -153,8 +161,10 @@
                     <a class="brown-button" href="#">Подробнее</a>
                     <button class="green-button" type="button" name="select-button">В избранном</button>
                     <span class="hotel-rating">Рейтинг: 9,2</span>
+                  </div>
                 </li>
                 <li class="hotel-card">
+                  <div class="hotel-card-container">
                     <a class="hotel-card-link" href="#">
                         <img src="images/catalog/quail-Inn.jpg" width="300" height="212" alt="Горы ранним утром">
                         <h3 class="hotel-name">Desert Quail Inn</h3>
@@ -164,8 +174,10 @@
                     <a class="brown-button" href="#">Подробнее</a>
                     <button class="blue-button" type="button" name="select-button">В избранное</button>
                     <span class="hotel-rating">Рейтинг: 6,9</span>
+                  </div>
                 </li>
                 <li class="hotel-card">
+                  <div class="hotel-card-container">
                     <a class="hotel-card-link" href="#">
                         <img src="images/catalog/greentree-inn.jpg" width="300" height="212" alt="Большая скала на фоне звездного неба">
                         <h3 class="hotel-name">GreenTree Inn</h3>
@@ -175,6 +187,7 @@
                     <a class="brown-button" href="#">Подробнее</a>
                     <button class="blue-button" type="button" name="select-button">В избранное</button>
                     <span class="hotel-rating">Рейтинг: 5,0</span>
+                  </div>
                 </li>
             </ul>
             <ul class="pagination nobullet">
@@ -197,6 +210,7 @@
                     <a class="pagination-link blue-button" href="#">10</a>
                   </li>
               </ul>
+            </div>
         </section>
         <section class="subscription-catalog">
             <h2 class="subscription-title-catalog">Подпишитесь на рассылку</h2>
@@ -211,19 +225,19 @@
     <footer class="page-footer">
       <section class="footer-socials">
        <h2 class="visually-hidden">Наши соцсети</h2>
-       <ul class="nobullet">
+       <ul class="socials-list nobullet">
         <li class="footer-social-item">
-          <a class="button-social" href="https://vk.com/htmlacademy">
+          <a class="button-social social-vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button-social" href="https://t.me/htmlacademy ">
+          <a class="button-social social-telegram" href="https://t.me/htmlacademy ">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button-social" href="https://www.youtube.com/user/htmlacademyru">
+          <a class="button-social social-youtube" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">YouTube</span>
           </a>
         </li>
@@ -241,6 +255,6 @@
           <img src="images/logo-academy.svg" width="115" height="33" alt="Логотип HTML Academy">
         </a>
       </section>
-    </footer>
+      </footer>
   </body>
 </html>
