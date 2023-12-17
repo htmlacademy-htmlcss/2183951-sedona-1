@@ -25,13 +25,13 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user nobullet">
-          <li class="navigation-item navigation-link-search">
-            <a class="navigation-link " href="#">
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item navigation-link-favorite">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="notification-badge">12</span>
             </a>
@@ -214,15 +214,16 @@
         </section>
         <section class="subscription-catalog">
             <h2 class="subscription-title-catalog">Подпишитесь на рассылку</h2>
-            <p class="subscription-subtitle-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="subscription-subtitle-catalog">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input type="email" id="sub-email" placeholder="Ваш e-mail" name="sub-email">
+              <input class="subscription-input catalog-input" type="email" id="sub-email" placeholder="Ваш e-mail" name="sub-email">
               <button class="sub-button blue-button" type="submit">Подписаться</button>
             </form>
           </section>
     </main>
 
     <footer class="page-footer">
+      <div class="footer-wrapper">
       <section class="footer-socials">
        <h2 class="visually-hidden">Наши соцсети</h2>
        <ul class="socials-list nobullet">
@@ -255,6 +256,7 @@
           <img src="images/logo-academy.svg" width="115" height="33" alt="Логотип HTML Academy">
         </a>
       </section>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>
