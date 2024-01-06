@@ -127,6 +127,7 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   bottom: -1px;
+  z-index: 1;
 }
 
 .navigation-link-inner::after {
