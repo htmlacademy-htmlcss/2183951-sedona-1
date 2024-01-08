@@ -1292,6 +1292,7 @@ input::-webkit-inner-spin-button {
   min-height: 48px;
   width: 48px;
   padding: 0;
+  cursor: pointer;
 }
 
 .button-hotels-display:focus-visible {
