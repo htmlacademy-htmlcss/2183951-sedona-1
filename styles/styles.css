@@ -574,8 +574,8 @@ body {
   z-index: 2;
 }
 
-.popup-toggle {
-  display: none
+.popup-show {
+  display: none;
 }
 
 .popup {
@@ -641,15 +641,17 @@ body {
 
 .popup-item {
   display: flex;
+  align-items: center;
   position: relative;
   font-size: 20px;
   line-height: 24px;
+  box-sizing: border-box;
   margin: 0;
 }
 
 .popup-input-date {
-  min-height: 48px;
-  min-width: 440px;
+  height: 48px;
+  width: 440px;
   margin: 0;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -658,6 +660,14 @@ body {
   background-color: #f2f2f2;
   color: #000000;
   cursor: pointer;
+}
+
+.popup-input-date::placeholder {
+  color: #000000;
+}
+
+.popup-input-date:focus::placeholder {
+  color: transparent;
 }
 
 .popup-label[for="start"]::after,
@@ -709,17 +719,20 @@ body {
 .popup-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .popup-label {
   display: inline-flex;
-  min-width: 137px;
+  box-sizing: border-box;
   align-items: center;
+  width: 120px;
+  margin-right: 18px;
 }
 
 .popup-features {
   display: block;
-  min-height: 48px;
+  height: 48px;
   max-width: 31px;
   font-weight: 700;
   font-size: 18px;
@@ -740,6 +753,7 @@ input::-webkit-inner-spin-button {
 
 .popup-input-style {
   outline: none;
+  height: 48px;
   border: none;
   padding: 0;
 }
@@ -782,15 +796,15 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.popup-label-children {
+.popup-input-children {
   position: relative;
+  max-width: 55px;
+  margin-right: 76px;
 }
 
 .tooltip-toggle {
   position: absolute;
   top: 12px;
-  margin: 0;
-  display: block;
   right: 157px;
   border: none;
   background-color: #82b3d3;
@@ -1055,6 +1069,7 @@ input::-webkit-inner-spin-button {
   display: block;
   padding-left: 36px;
   cursor: pointer;
+  outline: none;
 }
 
 .control-mark {
@@ -1063,7 +1078,6 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 20px;
   height: 20px;
-  border: none;
   background-color: #ffffff;
   border-radius: 4px;
 }
@@ -1112,6 +1126,11 @@ input::-webkit-inner-spin-button {
   background-color: #3f5e72;
   border-radius: 50%;
   content: "";
+}
+
+.control-input[autofocus]:focus-visible + .control-mark {
+  border: 3px solid #68a2ca;
+  outline: 3px solid #68a2ca;
 }
 
 .filter-facilities {
