@@ -127,7 +127,6 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   bottom: -1px;
-  z-index: 1;
 }
 
 .navigation-link-inner::after {
@@ -141,13 +140,17 @@ body {
   fill: #756157;
 }
 
+.navigation-icon-search,
+.navigation-link-favorite {
+  margin-top: 5px;
+}
+
 .navigation-icon-search:active,
 .navigation-link-favorite:active,
 .navigation-link:active:not(.brown-button) {
   color: rgba(117, 97, 87, 0.3);
   fill: rgba(117, 97, 87, 0.3);
 }
-
 
 .navigation-link {
   font-size: 20px;
@@ -174,7 +177,7 @@ body {
 .notification-badge {
   text-align: center;
   position: absolute;
-  bottom: 35px;
+  bottom: 33px;
   left: 20px;
   background-color: #7db54f;
   color: #ffffff;
@@ -192,24 +195,12 @@ body {
 }
 
 .hero {
-  position: relative;
+  min-height: 485px;
+  box-sizing: border-box;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding-top: 50px;
+  padding-top: 51px;
   padding-bottom: 25px;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 57px;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/hero-feature.svg");
 }
 
 .hero-text {
@@ -217,9 +208,21 @@ body {
   margin: 0 auto;
 }
 
+.hero::after {
+  content: "";
+  margin: 26px -2px 0 -2px;
+  height: 57px;
+  width: auto;
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/hero-feature.svg");
+}
+
 /*Преимущества + рекомендации*/
 .advantages {
-  padding-top: 70px;
+  padding-top: 44px;
   text-align: center;
   margin-bottom: 64px;
 }
@@ -243,6 +246,7 @@ body {
 }
 
 .advantages-title {
+  position: relative;
   margin-bottom: 25px;
 }
 
@@ -533,7 +537,7 @@ body {
   padding-left: 17px;
   padding-right: 0;
   max-height: 52px;
-  min-width: 432px;
+  min-width: 452px;
   border: 3px transparent solid;
   box-sizing: border-box;
   outline: none;
@@ -567,9 +571,10 @@ body {
   width: 100%;
   height: 100%;
   background-color:rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
-.popup-toggle {
+.popup-show {
   display: none;
 }
 
@@ -636,15 +641,17 @@ body {
 
 .popup-item {
   display: flex;
+  align-items: center;
   position: relative;
   font-size: 20px;
   line-height: 24px;
+  box-sizing: border-box;
   margin: 0;
 }
 
 .popup-input-date {
-  min-height: 48px;
-  min-width: 440px;
+  height: 48px;
+  width: 440px;
   margin: 0;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -653,6 +660,14 @@ body {
   background-color: #f2f2f2;
   color: #000000;
   cursor: pointer;
+}
+
+.popup-input-date::placeholder {
+  color: #000000;
+}
+
+.popup-input-date:focus::placeholder {
+  color: transparent;
 }
 
 .popup-label[for="start"]::after,
@@ -704,17 +719,20 @@ body {
 .popup-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .popup-label {
   display: inline-flex;
-  min-width: 137px;
+  box-sizing: border-box;
   align-items: center;
+  width: 120px;
+  margin-right: 18px;
 }
 
 .popup-features {
   display: block;
-  min-height: 48px;
+  height: 48px;
   max-width: 31px;
   font-weight: 700;
   font-size: 18px;
@@ -735,6 +753,7 @@ input::-webkit-inner-spin-button {
 
 .popup-input-style {
   outline: none;
+  height: 48px;
   border: none;
   padding: 0;
 }
@@ -777,15 +796,15 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.popup-label-children {
+.popup-input-children {
   position: relative;
+  max-width: 55px;
+  margin-right: 76px;
 }
 
 .tooltip-toggle {
   position: absolute;
   top: 12px;
-  margin: 0;
-  display: block;
   right: 157px;
   border: none;
   background-color: #82b3d3;
@@ -1050,6 +1069,7 @@ input::-webkit-inner-spin-button {
   display: block;
   padding-left: 36px;
   cursor: pointer;
+  outline: none;
 }
 
 .control-mark {
@@ -1058,7 +1078,6 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 20px;
   height: 20px;
-  border: none;
   background-color: #ffffff;
   border-radius: 4px;
 }
@@ -1107,6 +1126,11 @@ input::-webkit-inner-spin-button {
   background-color: #3f5e72;
   border-radius: 50%;
   content: "";
+}
+
+.control-input[autofocus]:focus-visible + .control-mark {
+  border: 3px solid #68a2ca;
+  outline: 3px solid #68a2ca;
 }
 
 .filter-facilities {
@@ -1185,7 +1209,7 @@ input::-webkit-inner-spin-button {
   width: 287px;
   position: relative;
   height: 2px;
-  margin-top: 48px;
+  margin-top: 45px;
   background-color: #ffffff;
 }
 
@@ -1218,6 +1242,7 @@ input::-webkit-inner-spin-button {
 
 .toggle-max {
   top: -8px;
+  left: -8px;
 }
 
 .filter-list {
@@ -1249,6 +1274,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-grow: 1;
   position: relative;
+  margin-top: 10px;
 }
 
 .hotels-header {
@@ -1256,14 +1282,17 @@ input::-webkit-inner-spin-button {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  min-height: 139px;
 }
 
 .button-hotels-display {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  min-height: 48px;
   width: 48px;
   padding: 0;
+  cursor: pointer;
 }
 
 .button-hotels-display:focus-visible {
@@ -1376,6 +1405,7 @@ input::-webkit-inner-spin-button {
   line-height: 36px;
   text-transform: uppercase;
   margin-right: 200px;
+  margin-top: 35px;
 }
 
 .select-control {
@@ -1387,9 +1417,8 @@ input::-webkit-inner-spin-button {
   line-height: 21px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding-left: 20px;
-  padding-right: 32px;
-  background: transparent url("data:image/svg+xml,<svg height='7px' width='12px' viewBox='0 0 12 9' fill='000000' xmlns='http://www.w3.org/2000/svg'><path d='M6.67501 7.71255L11.775 2.41255C12.075 2.11255 12.075 1.51255 11.775 1.21255C11.475 0.912549 10.875 0.912549 10.575 1.21255L6.07501 5.91255L1.57501 1.21255C1.27501 0.912549 0.675012 0.912549 0.375012 1.21255C0.175012 1.31255 0.0750122 1.61255 0.0750122 1.81255C0.0750122 2.01255 0.175012 2.21255 0.375012 2.41255L5.47501 7.71255C5.77501 8.11255 6.37501 8.11255 6.67501 7.71255Z'/></svg>") no-repeat right 16px center;
+  padding: 5px 30px 5px 20px;
+  background: transparent url("data:image/svg+xml,<svg height='8px' width='12px' viewBox='0 0 12 8' fill='000000' xmlns='http://www.w3.org/2000/svg'><path d='M6.67501 7.71255L11.775 2.41255C12.075 2.11255 12.075 1.51255 11.775 1.21255C11.475 0.912549 10.875 0.912549 10.575 1.21255L6.07501 5.91255L1.57501 1.21255C1.27501 0.912549 0.675012 0.912549 0.375012 1.21255C0.175012 1.31255 0.0750122 1.61255 0.0750122 1.81255C0.0750122 2.01255 0.175012 2.21255 0.375012 2.41255L5.47501 7.71255C5.77501 8.11255 6.37501 8.11255 6.67501 7.71255Z'/></svg>") no-repeat right 16px center;
   appearance: none;
   cursor: pointer;
 }

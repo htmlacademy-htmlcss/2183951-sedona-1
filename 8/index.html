@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <base href="https://htmlacademy-htmlcss.github.io/2183951-sedona-1/8/">
 </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img src="images/logo-page.svg" width="138" height="70" alt="Логотип">
+            <img src="images/logo-page.svg" width="139" height="70" alt="Логотип">
           </a>
         <ul class="navigation-list navigation-info nobullet">
           <li class="navigation-item">
@@ -53,6 +54,7 @@
         <img class="hero-text" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
       </section>
 
+      <!-- Преимущества -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <h2 class="advantages-title">Седона — небольшой городок в Аризоне,<br>
@@ -64,7 +66,7 @@
               <h3 class="advantages-item-title">Настоящий городок</h3>
               <p class="advantages-description advantages-description-white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-                <img class="advantages-image-town" src="images/advantages-town.jpg" width="800" height="385" alt="Город Седона">
+                <img class="advantages-image-town" src="images/advantages-town.jpg" width="800" height="385" alt="Город Седона.">
             </li>
             <li class="advantages-item light-blue">
               <div class="advantages-text-align">
@@ -85,14 +87,15 @@
               </div>
             </li>
             <li class="advantages-item advantages-bridge-wrapper deep-blue">
-              <img class="advantages-image-bridge" src="images/advantages-slope.jpg" height="385" width="800" alt="Мост дьявола">
+              <img class="advantages-image-bridge" src="images/advantages-slope.jpg" height="385" width="800" alt="Мост дьявола.">
             <div class="advantages-text-wrapper">
-              <h3 class="advantages-item-title">Там есть мост дьявола</h3>
+              <h3 class="advantages-item-title">Там есть <br> мост дьявола</h3>
               <p class="advantages-description advantages-description-white">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
           </li>
       </ul>
 
+        <!-- Рекомендации -->
       </section>
       <section class="recommendations">
         <h2 class="visually-hidden">Рекомендации</h2>
@@ -120,15 +123,17 @@
         </ul>
       </section>
 
+      <!-- Поиск гостиниц -->
       <section class="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-subtitle">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="brown-button" href="catalog.html">Поиск гостиницы в Седоне</a>
       </section>
 
+    <!-- Подписка -->
       <section class="subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-subtitle">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscription-input" type="email" id="sub-email" placeholder="Ваш e-mail" name="sub-email">
           <button class="blue-button" type="submit">Подписаться</button>
@@ -137,6 +142,7 @@
     </div>
     </main>
 
+    <!-- Футер -->
     <footer class="page-footer">
       <div class="footer-wrapper">
       <section class="footer-socials">
@@ -186,46 +192,45 @@
       </div>
     </footer>
 
-    <div class="modal-container popup-toggle">
+   <!-- Показать модальное окно: класс popup-show -->
+    <div class="modal-container popup-show">
       <div class="popup">
-          <button class="close-button" tabindex="0">
+          <button class="close-button" type="button" tabindex="0">
             <span class="visually-hidden">Закрыть окно</span>
             <svg class="close-button-icon" width="15" height="15" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
               <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"/>
             </svg>
           </button>
-        <form class="popup-form" action="catalog.html" method="get">
+        <form class="popup-form" action="https://echo.htmlacademy.ru" method="get">
           <h2 class="popup-header">Поиск гостинницы в Седоне</h2>
           <div class="popup-list">
           <p class="popup-item">
             <label class="popup-label" for="start">Дата заезда:</label>
-            <input class="popup-input-date" type="text" id="start" name="trip-start" placeholder="Укажите дату" value="27 апреля 2020"/>
+            <input class="popup-input-date" type="text" id="start" name="trip-start" placeholder="27 апреля 2020" value=""/>
             <span class="popup-input-error">Мы не можем отправить вас в прошлое.</span>
           </p>
           <p class="popup-item">
             <label class="popup-label" for="finish">Дата выезда:</label>
-            <input class="popup-input-date" type="text" id="finish" name="trip-end" placeholder="Укажите дату" value="1 сентября 2023">
+            <input class="popup-input-date" type="text" id="finish" name="trip-end" placeholder="1 сентября 2023" value="">
             <span class="popup-input-hint">На эти даты есть свободные номера. Пока есть.</span>
           </p>
-          <div class="popup-wrapper">
-        <div class="popup-item">
+        <div class="popup-wrapper">
+          <div class="popup-item">
             <label class="popup-label" for="adults">Взрослые:</label>
-              <button class="popup-input-style"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M13 23V25H27V23H13Z"/></svg></button>
+            <button class="popup-input-style" type="button"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M13 23V25H27V23H13Z"/></svg></button>
                 <input class="popup-features" type="number" id="adults" name="number-adults" value="2" min="1" max="10">
-              <button class="popup-input-style"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M27 23H21V17H19V23H13V25H19V31H21V25H27V23Z"/></svg></button>
-        </div>
-          <div class="popup-item popup-label-children">
-            <label class="popup-label" for="children">Дети:</label>
-              <button class="popup-input-style"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M13 23V25H27V23H13Z"/></svg></button>
+            <button class="popup-input-style" type="button"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M27 23H21V17H19V23H13V25H19V31H21V25H27V23Z"/></svg></button>
+          </div>
+          <div class="popup-item">
+            <label class="popup-label popup-input-children" for="children">Дети:</label>
+            <button class="popup-input-style " type="button"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M13 23V25H27V23H13Z"/></svg></button>
                 <input class="popup-features" type="number" id="children" name="number-children" value="2" min="0" max="10">
-              <button class="popup-input-style"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M27 23H21V17H19V23H13V25H19V31H21V25H27V23Z"/></svg></button>
-            <span class="tooltip">
+            <button class="popup-input-style" type="button"><svg width="40" height="48" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg"><path d="M27 23H21V17H19V23H13V25H19V31H21V25H27V23Z"/></svg></button>
             <button class="tooltip-toggle" type="button">
               <svg class="tooltip-icon" width="1" height="9" viewBox="0 0 1 9" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" /></g></svg>
             </button>
             <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-           </span>
           </div>
           </div>
           <div class="popup-button">
