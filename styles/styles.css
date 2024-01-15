@@ -1370,6 +1370,8 @@ input::-webkit-inner-spin-button {
   outline: none;
   cursor: pointer;
   border: 3px solid transparent;
+  -webkit-appearance: none;
+          appearance: none;
   -moz-appearance: textfield;
 }
 
